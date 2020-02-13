@@ -15,13 +15,13 @@ function test1(){
     //creates a grid array with one element "0,0"
     var grid = ("0, 0");
     //splits everything in the grid array 
-    grid = input.split(" ");
+    grid = input.split("");
 
     pos.push(x + ", " + y);
 
     //checks each grid element for the symbol in it and then moves accordingly 
     for(var i = 0; i < grid.length; i++){
-        (check === false);
+        check = false;
         if(grid[i] === "^"){
             x++;
         }else if(grid[i] === ">"){
@@ -64,13 +64,13 @@ function test2(){
 
     //grid array that store all of the positions that were visited
     var grid = ["0, 0"];
-    grid += input.split(" ");
+    grid = input.split("");
 
     pos.push("0, 0");
 
     //checks all the even values
     for(var i = 0; i < grid.length; i++){
-        (check === false);
+        check = false;
         if(i % 2 === 0){
             if(grid[i] === "^"){
                 x1++;
@@ -103,12 +103,12 @@ function test2(){
         for(var j = 0; j < pos.length; j++){
             for(var i = j+1; i < pos.length-1; i++){
                 if(pos[i] === pos[j]){
-                    continue loop;
+                    continue;
                 }
             }
             ans++;
         }
     }
-    output.document.innerHTML += ans;
+    document.getElementById("output").innerHTML = ans;
 }
     
